@@ -157,6 +157,8 @@ Ces dossiers sont privés et ne doivent pas être exposés publiquement. Ils son
 
 ## Scénario de démonstration — 3 minutes
 
+https://github.com/user-attachments/assets/165cfaca-26bd-407f-9878-bcbf31a19a05
+
 ### 1. Connexion et rôle
 
 1. Ouvrir http://127.0.0.1:5173
