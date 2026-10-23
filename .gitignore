@@ -1,0 +1,6 @@
+**/node_modules/
+client/dist/
+server/data/*.sqlite
+server/data/*.sqlite-*
+server/private_uploads/*
+!server/private_uploads/.gitkeep

@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: eigsi-gestion-absences
+    runtime: node
+    plan: starter
+    numInstances: 1
+    buildCommand: npm ci --prefix server && npm ci --prefix client && npm run build --prefix client
+    startCommand: npm run start --prefix server
+    healthCheckPath: /api/hello
+    disk:
+      name: eigsi-absences-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: UPLOADS_DIR
+        value: /var/data/private_uploads
+      - key: ADMIN_SETUP_SECRET
+        generateValue: true
+      - key: ENABLE_NOTIFICATION_SCHEDULER
+        value: "false"
+      - key: PUBLIC_URL
+        sync: false
